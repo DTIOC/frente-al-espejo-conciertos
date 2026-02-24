@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Frente al Espejo Conciertos - Programa digital de obras para guitarra y flauta. Óscar Cárdenas, compositor y guitarrista.">
+  <title>Frente al Espejo Conciertos | Óscar Cárdenas</title>
+  <style>
+    :root {
+      --primary: #1a5276;
+      --secondary: #7d3c98;
+      --accent: #b7950b;
+      --light: #f8f9fa;
+      --dark: #2c3e50;
+      --text: #34495e;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+      min-height: 100vh;
+    }
+    
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+    
+    /* Header */
+    header {
+      text-align: center;
+      padding: 3rem 0;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color: white;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: normal;
+      letter-spacing: 2px;
+    }
+    
+    header .subtitle {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      font-style: italic;
+    }
+    
+    header .info {
+      margin-top: 1.5rem;
+      font-size: 1rem;
+      opacity: 0.85;
+    }
+    
+    /* Portada del CD */
+    .cd-cover {
+      text-align: center;
+      margin: 2rem 0;
+      padding: 1.5rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+    
+    .cd-cover img {
+      max-width: 220px;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
+    }
+    
+    .cd-cover img:hover {
+      transform: scale(1.03);
+    }
+    
+    .cd-cover .cd-title {
+      margin-top: 1rem;
+      font-weight: bold;
+      color: var(--dark);
+      font-size: 1.2rem;
+    }
+    
+    .cd-cover .cd-year {
+      color: var(--accent);
+      font-style: italic;
+    }
+    
+    /* Sections */
+    section {
+      background: white;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+    
+    h2 {
+      color: var(--primary);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+    }
+    
+    h3 {
+      color: var(--secondary);
+      margin: 1.5rem 0 0.8rem 0;
+      font-size: 1.3rem;
+    }
+    
+    /* Programa de obras */
+    .obra {
+      padding: 1.2rem 0;
+      border-bottom: 1px dashed #ddd;
+    }
+    
+    .obra:last-child {
+      border-bottom: none;
+    }
+    
+    .obra-num {
+      font-weight: bold;
+      color: var(--accent);
+      margin-right: 0.5rem;
+    }
+    
+    .obra-titulo {
+      font-weight: bold;
+      font-size: 1.1rem;
+      color: var(--dark);
+    }
+    
+    .obra-compositor {
+      font-style: italic;
+      color: #666;
+      margin-left: 1.5rem;
+    }
+    
+    .obra-interprete {
+      font-size: 0.95rem;
+      color: var(--primary);
+      margin-left: 1.5rem;
+      margin-top: 0.3rem;
+    }
+    
+    /* Biografías */
+    .bio-text {
+      text-align: justify;
+      line-height: 1.8;
+    }
+    
+    #biografia-daniel {
+      border-left: 4px solid var(--secondary);
+    }
+    
+    #biografia {
+      border-left: 4px solid var(--accent);
+    }
+    
+    /* Botón de descarga */
+    .btn-download {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color: white;
+      padding: 1rem 2.5rem;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      margin: 1rem 0;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(26, 82, 118, 0.3);
+    }
+    
+    .btn-download:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(26, 82, 118, 0.4);
+    }
+    
+    .btn-download::before {
+      content: "📥 ";
+    }
+    
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      color: #666;
+      font-size: 0.9rem;
+    }
+    
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+    
+    footer a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Responsive */
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.8rem; }
+      section { padding: 1.5rem; }
+      h2 { font-size: 1.5rem; }
+      .cd-cover img { max-width: 180px; }
+    }
+    
+    /* Utilidades */
+    .text-center { text-align: center; }
+    .mt-2 { margin-top: 1rem; }
+    .mb-2 { margin-bottom: 1rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <!-- Header -->
+    <header>
+      <h1>Frente al Espejo Conciertos</h1>
+      <p class="subtitle">Obras para guitarra y flauta • Óscar Cárdenas</p>
+      <div class="info">
+        <p><strong>Fecha:</strong> [DÍA] de [MES] de 2026</p>
+        <p><strong>Hora:</strong> [HORA]</p>
+        <p><strong>Lugar:</strong> Salón de Usos Múltiples, Plantel Iztapalapa 1</p>
+      </div>
+    </header>
+
+    <!-- Portada del CD -->
+    <section class="cd-cover">
+      <img src="img/portada-cd.jpg" alt="Portada del CD: Frente al Espejo - Óscar Cárdenas">
+      <p class="cd-title">Frente al Espejo</p>
+      <p class="cd-year">Óscar Cárdenas • 2025</p>
+    </section>
+    
+    <!-- Programa de Obras -->
+    <section id="programa">
+      <h2>🎼 Programa</h2>
+      
+      <!-- OBRA 1 -->
+      <div class="obra">
+        <p>
+          <span class="obra-num">I.</span> 
+          <span class="obra-titulo">
+            Dos Estudios, para guitarra sola:<br>
+            &nbsp;&nbsp;• Estudio No. 1 (de arpegios con cruce de dedos)<br>
+            &nbsp;&nbsp;• Estudio No. 4 (de escalas)
+          </span>
+        </p>
+      </div>
+      
+      <!-- OBRA 2 -->
+      <div class="obra">
+        <p>
+          <span class="obra-num">II.</span> 
+          <span class="obra-titulo">
+            Microsuite, para guitarra sola:<br>
+            &nbsp;&nbsp;• I- Preludio<br>
+            &nbsp;&nbsp;• II- Aire de Sarabanda<br>
+            &nbsp;&nbsp;• III- Andante<br>
+            &nbsp;&nbsp;• IV- Interludio<br>
+            &nbsp;&nbsp;• V- Final
+          </span>
+        </p>
+      </div>
+      
+      <!-- OBRA 3 -->
+      <div class="obra">
+        <p>
+          <span class="obra-num">III.</span> 
+          <span class="obra-titulo">
+            De Yúmari III, para guitarra sola:<br>
+            &nbsp;&nbsp;• III- Allegretto
+          </span>
+        </p>
+      </div>
+      
+      <!-- OBRA 4 -->
+      <div class="obra">
+        <p>
+          <span class="obra-num">IV.</span> 
+          <span class="obra-titulo">15 en Mixolidio, para guitarra sola</span>
+        </p>
+      </div>
+      
+      <!-- OBRA 5 -->
+      <div class="obra">
+        <p>
+          <span class="obra-num">V.</span> 
+          <span class="obra-titulo">¡A la Libertad!, para guitarra sola</span>
+        </p>
+      </div>
+      
+      <!-- OBRA 6 -->
+      <div class="obra">
+        <p>
+          <span class="obra-num">VI.</span> 
+          <span class="obra-titulo">A Don Beto Son, para guitarra sola</span>
+        </p>
+      </div>
+      
+      <!-- OBRA 7 -->
+      <div class="obra">
+        <p>
+          <span class="obra-num">VII.</span> 
+          <span class="obra-titulo">
+            Astillas Escritas, para flauta y guitarra:<br>
+            &nbsp;&nbsp;• I- Allegro<br>
+            &nbsp;&nbsp;• II- Lento<br>
+            &nbsp;&nbsp;• III- Allegro<br>
+            &nbsp;&nbsp;• IV- Muy Lento<br>
+            &nbsp;&nbsp;• V- Allegro Molto
+          </span>
+        </p>
+        <p class="obra-interprete">Flauta: Daniel Hernández</p>
+      </div>
+    </section>
+    
+    <!-- Biografía de Daniel Hernández -->
+    <section id="biografia-daniel">
+      <h2>Sobre Daniel Hernández</h2>
+      <div class="bio-text">
+        <p><strong>Daniel Hernández</strong> es flautista egresado de la Escuela Nacional de Música (actual Facultad de Música de la UNAM), donde estudió con los maestros Rubén Islas y Héctor Jaramillo. Ha participado en orquestas y, principalmente, en grupos de cámara.</p>
+        <p class="mt-2">De 2001 a 2009 participó activamente en el ensamble de música tradicional japonesa <em>Kasou Kai</em>, con conciertos en México, varias giras al extranjero y en la grabación de un disco. También forma parte del dúo de arpa y flauta con la maestra Mabel Rodríguez, con quien ha presentado conciertos en diversas salas. En 2012 participaron en el Festival de las Noches Blancas en la ciudad de Perm, Rusia.</p>
+        <p class="mt-2">Actualmente se dedica ampliamente a la docencia y se encuentra preparando material para flauta sola.</p>
+      </div>
+    </section>
+    
+    <!-- Biografía de Óscar Cárdenas -->
+    <section id="biografia">
+      <h2>Sobre Óscar Cárdenas</h2>
+      <div class="bio-text">
+        <p><strong>Óscar Cárdenas</strong> es guitarrista y compositor originario de Chihuahua. Egresado de la Facultad de Música de la UNAM (2004), estudió con Cleofas Villegas, Juan Carlos Chacón, Leo Brouwer y Frank Bungarten. Ha obtenido reconocimientos en concursos nacionales de guitarra y se ha presentado como solista y con orquestas bajo la dirección de Enrique Diemecke, Jorge Córdoba y Enrique Barrios en México y Belice.</p>
+        <p class="mt-2">Su obra compositiva abarca piezas para guitarra, ensambles de cámara, voz y orquesta. Es miembro de la Liga de Compositores desde 2003, donde actualmente funge como Secretario. En 2025 lanzó <em>Frente al Espejo</em>, producción discográfica con obras de su autoría.</p>
+        <p class="mt-2">Desde 2004 ejerce la docencia en el Instituto de Educación Media Superior de la CDMX, actualmente en la Preparatoria Iztapalapa 1.</p>
+      </div>
+    </section>
+    
+    <!-- Descarga PDF -->
+    <section class="text-center" id="descarga">
+      <h2>Programa Completo</h2>
+      <p class="mb-2">Descarga la versión en PDF para guardar o imprimir</p>
+      <a href="pdf/Programa-Completo.pdf" class="btn-download" download>
+        Descargar Programa (PDF)
+      </a>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+      <p><strong>Academia de Música • Plantel Iztapalapa 1</strong></p>
+      <p>Instituto de Educación Media Superior de la Ciudad de México</p>
+      <p class="mt-2">
+        <a href="https://www.youtube.com/c/%C3%93scarC%C3%A1rdenascompositor" 
+           target="_blank" 
+           rel="noopener noreferrer">
+          YouTube: Óscar Cárdenas Compositor
+        </a>
+      </p>
+      <p class="mt-2">© 2026 • Todos los derechos reservados</p>
+    </footer>
+    
+  </div>
+</body>
+</html>
