@@ -156,6 +156,7 @@
       color: var(--primary);
       margin-left: 1.5rem;
       margin-top: 0.3rem;
+      font-weight: 500;
     }
     
     /* Biografías */
@@ -164,13 +165,15 @@
       line-height: 1.8;
     }
     
-    #biografia-daniel {
-      border-left: 4px solid var(--secondary);
-    }
-    
+    #biografia-daniel,
+    #biografia-cesar,
     #biografia {
       border-left: 4px solid var(--accent);
+      padding-left: 1.2rem;
     }
+    
+    #biografia-daniel { border-left-color: var(--secondary); }
+    #biografia-cesar { border-left-color: var(--primary); }
     
     /* Botón de descarga */
     .btn-download {
@@ -252,22 +255,10 @@
     <section id="programa">
       <h2>Programa</h2>
       
-      <!-- OBRA 1 -->
+      <!-- OBRA 1: Microsuite -->
       <div class="obra">
         <p>
           <span class="obra-num">I.</span> 
-          <span class="obra-titulo">
-            Dos Estudios, para guitarra sola:<br>
-            &nbsp;&nbsp;• Estudio No. 1 (de arpegios con cruce de dedos)<br>
-            &nbsp;&nbsp;• Estudio No. 4 (de escalas)
-          </span>
-        </p>
-      </div>
-      
-      <!-- OBRA 2 -->
-      <div class="obra">
-        <p>
-          <span class="obra-num">II.</span> 
           <span class="obra-titulo">
             Microsuite, para guitarra sola:<br>
             &nbsp;&nbsp;• I- Preludio<br>
@@ -279,7 +270,19 @@
         </p>
       </div>
       
-      <!-- OBRA 3 -->
+      <!-- OBRA 2: Dos Estudios -->
+      <div class="obra">
+        <p>
+          <span class="obra-num">II.</span> 
+          <span class="obra-titulo">
+            Dos Estudios, para guitarra sola:<br>
+            &nbsp;&nbsp;• Estudio No. 1 (de arpegios con cruce de dedos)<br>
+            &nbsp;&nbsp;• Estudio No. 4 (de escalas)
+          </span>
+        </p>
+      </div>
+      
+      <!-- OBRA 3: Yúmari III - II- Lento (César Castellanos) -->
       <div class="obra">
         <p>
           <span class="obra-num">III.</span> 
@@ -288,36 +291,45 @@
             &nbsp;&nbsp;• II- Lento
           </span>
         </p>
+        <p class="obra-interprete">Guitarra: César Castellanos</p>
       </div>
       
-      <!-- OBRA 4 -->
+      <!-- OBRA 4: Canción de Cuna -->
       <div class="obra">
         <p>
           <span class="obra-num">IV.</span> 
+          <span class="obra-titulo">Canción de Cuna, para guitarra sola</span>
+        </p>
+      </div>
+      
+      <!-- OBRA 5: 15 en Mixolidio -->
+      <div class="obra">
+        <p>
+          <span class="obra-num">V.</span> 
           <span class="obra-titulo">15 en Mixolidio, para guitarra sola</span>
         </p>
       </div>
       
-      <!-- OBRA 5 -->
+      <!-- OBRA 6: ¡A la Libertad! -->
       <div class="obra">
         <p>
-          <span class="obra-num">V.</span> 
+          <span class="obra-num">VI.</span> 
           <span class="obra-titulo">¡A la Libertad!, para guitarra sola</span>
         </p>
       </div>
       
-      <!-- OBRA 6 -->
+      <!-- OBRA 7: A Don Beto Son -->
       <div class="obra">
         <p>
-          <span class="obra-num">VI.</span> 
+          <span class="obra-num">VII.</span> 
           <span class="obra-titulo">A Don Beto Son, para guitarra sola</span>
         </p>
       </div>
       
-      <!-- OBRA 7 -->
+      <!-- OBRA 8: Astillas Escritas -->
       <div class="obra">
         <p>
-          <span class="obra-num">VII.</span> 
+          <span class="obra-num">VIII.</span> 
           <span class="obra-titulo">
             Astillas Escritas, para flauta y guitarra:<br>
             &nbsp;&nbsp;• I- Allegro<br>
@@ -328,6 +340,17 @@
           </span>
         </p>
         <p class="obra-interprete">Flauta: Daniel Hernández</p>
+      </div>
+    </section>
+    
+    <!-- Biografía de César Castellanos -->
+    <section id="biografia-cesar">
+      <h2>Sobre César Castellanos</h2>
+      <div class="bio-text">
+        <p><em>[Espacio reservado para la semblanza de César Castellanos]</em></p>
+        <p class="mt-2">
+          <!-- Aquí podrás agregar la biografía completa de César cuando la tengas disponible -->
+        </p>
       </div>
     </section>
     
