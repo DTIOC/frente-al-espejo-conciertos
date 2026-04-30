@@ -159,17 +159,35 @@
       font-weight: 500;
     }
     
-    /* Nota para adquisición del CD */
+    /* Nota para adquisición del CD - EN NEGRITAS */
     .obra-nota {
       font-size: 0.9rem;
       color: var(--dark);
       margin-left: 1.5rem;
       margin-top: 0.5rem;
       font-style: italic;
+      font-weight: 600; /* ← NEGRITAS */
       padding: 0.4rem 0.8rem;
       background: #f8f9fa;
       border-left: 3px solid var(--accent);
       border-radius: 0 4px 4px 0;
+    }
+    
+    /* Fotos de biografía */
+    .bio-foto {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid var(--accent);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      display: block;
+      margin: 0 auto 1.5rem auto;
+      transition: transform 0.3s ease;
+    }
+    
+    .bio-foto:hover {
+      transform: scale(1.05);
     }
     
     /* Biografías */
@@ -253,6 +271,11 @@
       .obra-interprete, .obra-nota { font-size: 0.85rem; margin-left: 1rem; }
       .btn-download { width: 100%; padding: 0.9rem 1.5rem; font-size: 1rem; text-align: center; }
       .bio-text p { font-size: 0.95rem; line-height: 1.7; }
+      .bio-foto { 
+        width: 160px; 
+        height: 160px; 
+        margin-bottom: 1rem;
+      }
     }
     
     @media (max-width: 480px) {
@@ -261,6 +284,10 @@
       .obra-num { display: inline-block; min-width: 2rem; }
       .btn-download { font-size: 0.95rem; padding: 0.8rem; }
       .obra-nota { font-size: 0.8rem; padding: 0.3rem 0.6rem; }
+      .bio-foto { 
+        width: 140px; 
+        height: 140px; 
+      }
     }
   </style>
 </head>
@@ -376,7 +403,7 @@
         <p class="obra-interprete">Flauta: Daniel Hernández</p>
         <p class="obra-nota">
           💿 Si estás interesado/a en adquirir el CD, puedes comunicarte a 
-          <a href="mailto:oecp@protonmail.com" style="color: var(--primary); text-decoration: none; font-weight: 500;">
+          <a href="mailto:oecp@protonmail.com" style="color: var(--primary); text-decoration: none; font-weight: 700;">
             oecp@protonmail.com
           </a> y tiene un costo de $50 MN.
         </p>
@@ -386,6 +413,7 @@
     <!-- Biografía de César Castellanos -->
     <section id="biografia-cesar">
       <h2>Sobre César Castellanos</h2>
+      <img src="cesar-castellanos.jpg" alt="César Castellanos - Guitarrista" class="bio-foto">
       <div class="bio-text">
         <p><em>[Espacio reservado para la semblanza de César Castellanos]</em></p>
         <p class="mt-2">
@@ -397,6 +425,7 @@
     <!-- Biografía de Daniel Hernández -->
     <section id="biografia-daniel">
       <h2>Sobre Daniel Hernández</h2>
+      <img src="daniel-hernandez.jpg" alt="Daniel Hernández - Flautista" class="bio-foto">
       <div class="bio-text">
         <p><strong>Daniel Hernández</strong> es flautista egresado de la Escuela Nacional de Música (actual Facultad de Música de la UNAM), donde estudió con los maestros Rubén Islas y Héctor Jaramillo. Ha participado en orquestas y, principalmente, en grupos de cámara.</p>
         <p class="mt-2">De 2001 a 2009 participó activamente en el ensamble de música tradicional japonesa <em>Kasou Kai</em>, con conciertos en México, varias giras al extranjero y en la grabación de un disco. También forma parte del dúo de arpa y flauta con la maestra Mabel Rodríguez, con quien ha presentado conciertos en diversas salas. En 2012 participaron en el Festival de las Noches Blancas en la ciudad de Perm, Rusia.</p>
@@ -407,6 +436,7 @@
     <!-- Biografía de Óscar Cárdenas -->
     <section id="biografia">
       <h2>Sobre Óscar Cárdenas</h2>
+      <img src="oscar-cardenas.jpg" alt="Óscar Cárdenas - Compositor y guitarrista" class="bio-foto">
       <div class="bio-text">
         <p><strong>Óscar Cárdenas</strong> es guitarrista y compositor originario de Chihuahua. Egresado de la Facultad de Música de la UNAM (2004), estudió con Cleofas Villegas, Juan Carlos Chacón, Leo Brouwer y Frank Bungarten. Ha obtenido reconocimientos en concursos nacionales de guitarra y se ha presentado como solista y con orquestas bajo la dirección de Enrique Diemecke, Jorge Córdoba y Enrique Barrios en México y Belice.</p>
         <p class="mt-2">Su obra compositiva abarca piezas para guitarra, ensambles de cámara, voz y orquesta. Es miembro de la Liga de Compositores desde 2003, donde actualmente funge como Secretario. En 2025 lanzó <em>Frente al Espejo</em>, producción discográfica con obras de su autoría.</p>
