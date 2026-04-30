@@ -229,18 +229,39 @@
       text-decoration: underline;
     }
     
-    /* Responsive */
-    @media (max-width: 600px) {
-      header h1 { font-size: 1.8rem; }
-      section { padding: 1.5rem; }
-      h2 { font-size: 1.5rem; }
-      .cd-cover img { max-width: 180px; }
-    }
-    
     /* Utilidades */
     .text-center { text-align: center; }
     .mt-2 { margin-top: 1rem; }
     .mb-2 { margin-bottom: 1rem; }
+
+    /* 📱 Optimización responsive para móviles */
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    @media (max-width: 768px) {
+      .container { padding: 1rem 0.8rem; }
+      header { padding: 2rem 1rem; border-radius: 8px; }
+      header h1 { font-size: 2rem; letter-spacing: 1px; }
+      header .subtitle { font-size: 1rem; }
+      .cd-cover img { max-width: 180px; }
+      section { padding: 1.2rem 1rem; margin-bottom: 1rem; border-radius: 8px; }
+      h2 { font-size: 1.5rem; margin-bottom: 1rem; }
+      .obra-titulo { font-size: 1rem; }
+      .obra-interprete, .obra-nota { font-size: 0.85rem; margin-left: 1rem; }
+      .btn-download { width: 100%; padding: 0.9rem 1.5rem; font-size: 1rem; text-align: center; }
+      .bio-text p { font-size: 0.95rem; line-height: 1.7; }
+    }
+    
+    @media (max-width: 480px) {
+      header h1 { font-size: 1.7rem; }
+      h2 { font-size: 1.3rem; }
+      .obra-num { display: inline-block; min-width: 2rem; }
+      .btn-download { font-size: 0.95rem; padding: 0.8rem; }
+      .obra-nota { font-size: 0.8rem; padding: 0.3rem 0.6rem; }
+    }
   </style>
 </head>
 <body>
